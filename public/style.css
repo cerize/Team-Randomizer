@@ -1,0 +1,49 @@
+body {
+	font-family: font-family: 'Lora', serif;
+  font-size: 18px;
+	line-height: 1.9;
+	color: #555753;
+	margin: 0;
+	padding: 0;
+  width: 100%;
+  text-align: center;
+	}
+
+h1 {
+	color: #3B3738;
+}
+
+#titles {
+  color: #3B3738;
+  font-weight: lighter;
+  text-align: center;
+	font-weight: bold;
+}
+
+
+#outer {
+  width: 100%;
+  /*height: 100vh;*/
+  text-align: left;;
+  background-color: #ECECEA;
+	padding: 20px;
+}
+
+
+#submit {
+	background-color:#f9f9f9;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#7D775C;
+  font-size: 16px;
+  padding: 10px;
+
+}
+
+#code {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 14px;
+	text-align: left;
+}

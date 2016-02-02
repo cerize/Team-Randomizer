@@ -1,0 +1,47 @@
+
+<div id="outer">
+
+  <h1>Team Randomizer</h1>
+
+
+  <form action="/" method="post">
+    <label for="names"><span id="titles">Names</span></label>
+    <input id="names" type="text" name="names" size="100" value="<%= session[:names] %>"></textarea>
+    <br>
+    <label for="method"><span id="titles">Method</span></label>
+    <input type="radio" name="method" value="team_count" <% if session[:method] == "team_count" %> checked="checked"<% end %>>
+    Team Count
+    <input type="radio" name="method" value="n_per_team" <% if session[:method] == "n_per_team" %> checked="checked"<% end %>>
+    Number per Team
+    <br>
+    <label for="number"><span id="titles">Number</span></label>
+    <input type="text" name="number" value="<%= session[:number] %>">
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+
+  </div>
+
+<% if session[:teams].kind_of?(Array) %>
+
+  <% session[:teams].each do |team| %>
+    <% team.each do |person| %>
+      <%= person %>
+        <br>
+    <% end %>
+        <br>
+        <br>
+  <% end %>
+<% else %>
+  <%= session[:teams] %>
+<% end %>
+**********
+
+<!-- <br>
+<br>
+<span id="code">
+<% session.each do |key, value| %>
+<%= key %> <br>
+<%= p value %> <br>
+<% end %>
+</span> -->
